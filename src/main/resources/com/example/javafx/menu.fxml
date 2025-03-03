@@ -2,7 +2,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.Main" spacing="20" style="-fx-padding: 20;">
-    <Button text="Start Quiz" onAction="#showQuizPage" />
-    <Button text="Go to Blank Page" onAction="#showBlankPage" />
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.MainController" spacing="20" style="-fx-padding: 20;">
+    <Button text="Contestar Preguntas" onAction="#showQuizPage" />
+    <Button text="Editar Preguntas" onAction="#showBlankPage" />
 </VBox>
