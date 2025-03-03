@@ -3,12 +3,14 @@ package com.example.javafx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     private Stage primaryStage;
+    Image icon = new Image(getClass().getResourceAsStream("/QUIZ.png"));
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -27,6 +29,7 @@ public class Main extends Application {
             primaryStage.setTitle("Quiz Castellar");
             primaryStage.setScene(menuScene);
             primaryStage.show();
+            primaryStage.getIcons().add(icon);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error menu.fxml");

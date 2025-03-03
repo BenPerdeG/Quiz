@@ -44,11 +44,14 @@ public class QuizController {
             preguntasLabel.setText(q.getQuestionText());
             opciones.getChildren().clear();
 
-            for (String option : q.getOptions()) {
-                RadioButton rb = new RadioButton(option);
-                rb.setToggleGroup(grupo);
-                opciones.getChildren().add(rb);
-            }
+            // Use Streams and Lambdas to add RadioButtons for each option
+            q.getOptions().stream()
+                    .map(option -> {
+                        RadioButton rb = new RadioButton(option);
+                        rb.setToggleGroup(grupo);
+                        return rb;
+                    })
+                    .forEach(rb -> opciones.getChildren().add(rb));
         } else {
             showResult();
         }
@@ -77,16 +80,13 @@ public class QuizController {
     @FXML
     private void goBackToMenu() {
         try {
-
             FXMLLoader menuLoader = new FXMLLoader(getClass().getResource("menu.fxml"));
             VBox menuLayout = menuLoader.load();
-
 
             MainController mainController = menuLoader.getController();
             mainController.setPrimaryStage((Stage) backToMenu.getScene().getWindow());
 
             Scene menuScene = new Scene(menuLayout, 400, 300);
-
 
             Stage stage = (Stage) backToMenu.getScene().getWindow();
             stage.setScene(menuScene);

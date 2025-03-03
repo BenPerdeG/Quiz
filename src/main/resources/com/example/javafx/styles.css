@@ -1,0 +1,46 @@
+/* styles.css */
+.root {
+    -fx-background-color: #f4f4f4;
+    -fx-font-family: 'Arial';
+}
+
+.text {
+    -fx-fill: #333333;
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+}
+
+.text-area {
+    -fx-font-size: 14px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+}
+
+.vbox {
+    -fx-spacing: 10px;
+    -fx-padding: 20px;
+}
+
+.hbox {
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+}

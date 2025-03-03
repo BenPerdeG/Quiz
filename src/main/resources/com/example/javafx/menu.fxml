@@ -4,13 +4,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javafx.MainController"
+      stylesheets="styles.css">
 
-<VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.MainController">
-
-    <Text strokeLineCap="ROUND" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #000000;" text="Bienvenidos al Quiz Castellar" textAlignment="CENTER">
-      <font>
-         <Font name="Arial Black" size="12.0" />
-      </font></Text>
+    <Text strokeLineCap="ROUND" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #000000;"
+          text="Bienvenidos al Quiz Castellar" textAlignment="CENTER">
+        <font>
+            <Font name="Arial Black" size="12.0" />
+        </font>
+    </Text>
     <Button onAction="#showQuizPage" text="Contestar Preguntas" />
     <Button onAction="#showEditPage" style="-fx-border-radius: 15;" text="Editar Preguntas" />
 </VBox>

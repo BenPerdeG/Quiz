@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="600419f3-4da4-4d82-a418-d0d33e91ec6f" name="Changes" comment="Quiz">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/PreguntasController.java" afterDir="false" />
+    <list default="true" id="600419f3-4da4-4d82-a418-d0d33e91ec6f" name="Changes" comment="A">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/QUIZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafx/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx/CargarPreguntas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/CargarPreguntas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx/PregunatsController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/QuizController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/javafx/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafx/menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/javafx/questions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafx/questions.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/questions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/javafx/quiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafx/quiz.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/thuri/Desktop/DAM/JavaFX/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\thuri\Desktop\DAM\JavaFX\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thuri\Desktop\DAM\JavaFX\src\main\resources\com\example\javafx" />
       <recent name="C:\Users\thuri\Desktop\DAM\JavaFX\src\main\java\com\example\javafx" />
+      <recent name="C:\Users\thuri\Desktop\DAM\JavaFX\src\main\resources\com\example\javafx\src\main\resources" />
+      <recent name="C:\Users\thuri\Desktop\DAM\JavaFX\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -96,11 +104,20 @@
       <option name="project" value="LOCAL" />
       <updated>1741016694752</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="A">
+      <option name="closed" value="true" />
+      <created>1741024407488</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741024407488</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Quiz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quiz" />
+    <MESSAGE value="A" />
+    <option name="LAST_COMMIT_MESSAGE" value="A" />
   </component>
 </project>
