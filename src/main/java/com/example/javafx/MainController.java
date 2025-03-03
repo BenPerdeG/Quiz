@@ -17,32 +17,35 @@ public class MainController {
     @FXML
     private void showQuizPage() {
         try {
-            // Load the quiz page FXML
+
             FXMLLoader quizLoader = new FXMLLoader(getClass().getResource("quiz.fxml"));
             VBox quizLayout = quizLoader.load();
             Scene quizScene = new Scene(quizLayout, 400, 300);
 
-            // Set the new scene
             primaryStage.setScene(quizScene);
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Error loading quiz.fxml");
+            System.out.println("Error quiz.fxml");
         }
     }
 
     @FXML
-    private void showBlankPage() {
+    private void showEditPage() {
         try {
-            // Load the blank page FXML
-            FXMLLoader blankLoader = new FXMLLoader(getClass().getResource("blank.fxml"));
-            VBox blankLayout = blankLoader.load();
-            Scene blankScene = new Scene(blankLayout, 400, 300);
 
-            // Set the new scene
-            primaryStage.setScene(blankScene);
+            FXMLLoader editLoader = new FXMLLoader(getClass().getResource("questions.fxml"));
+            VBox editLayout = editLoader.load();
+
+
+            PreguntasController editController = editLoader.getController();
+            editController.setPrimaryStage(primaryStage);
+
+            Scene editScene = new Scene(editLayout, 400, 300);
+
+            primaryStage.setScene(editScene);
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Error loading blank.fxml");
+            System.out.println("Error questions.fxml");
         }
     }
 }

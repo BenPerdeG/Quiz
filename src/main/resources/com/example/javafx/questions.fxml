@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.Main" spacing="20" style="-fx-padding: 20;">
-    <Label text="This is a blank page. Edit it later!" />
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.PreguntasController" spacing="20" style="-fx-padding: 20;">
+    <Text>
+        Editar y añadir Preguntas.
+    </Text>
+    <Text>
+        Formato: Pregunta;a,b,c,d;respuesta correcta(a,b,c o d)
+    </Text>
+    <TextArea fx:id="questionsTextArea" wrapText="true" />
+    <HBox spacing="10">
+        <Button text="Guardar Cambios" onAction="#saveChanges" />
+        <Button text="Salir" onAction="#goBackToMenu" />
+    </HBox>
 </VBox>
