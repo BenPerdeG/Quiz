@@ -1,84 +1,67 @@
 package com.example.javafx;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import java.util.List;
 
 public class Main extends Application {
-    private List<Preguntas> preguntas;
-    private int preguntactual = 0;
-    private int puntuacion = 0;
-    private Label preguntasLabel;
-    private ToggleGroup grupo;
-    private VBox opciones;
-    private Button next;
+
+    private Stage primaryStage; // Reference to the primary stage
 
     @Override
     public void start(Stage primaryStage) {
-        // Load questions from file
+        this.primaryStage = primaryStage; // Store the primary stage
         try {
-            preguntas = CargarPreguntas.loadQuestions("questions.txt");
+            // Load the menu page FXML
+            FXMLLoader menuLoader = new FXMLLoader(getClass().getResource("menu.fxml"));
+            VBox menuLayout = menuLoader.load(); // No need to set the controller here
+            Scene menuScene = new Scene(menuLayout, 400, 300);
+
+            // Set the menu scene and show the stage
+            primaryStage.setTitle("JavaFX Navigation App");
+            primaryStage.setScene(menuScene);
+            primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Error con las preguntas!");
-            return;
-        }
-
-        // Initialize UI components
-        preguntasLabel = new Label();
-        grupo = new ToggleGroup();
-        opciones = new VBox(10);
-        next = new Button("Next");
-
-        next.setOnAction(e -> checkAnswer());
-
-        VBox layout = new VBox(20, preguntasLabel, opciones, next);
-        layout.setStyle("-fx-padding: 20;");
-        primaryStage.setScene(new Scene(layout, 400, 300));
-
-        showQuestion();
-        primaryStage.setTitle("JavaFX Quiz App");
-        primaryStage.show();
-    }
-
-    private void showQuestion() {
-        if (preguntactual < preguntas.size()) {
-            Preguntas q = preguntas.get(preguntactual);
-            preguntasLabel.setText(q.getQuestionText());
-            opciones.getChildren().clear();
-
-            for (String option : q.getOptions()) {
-                RadioButton rb = new RadioButton(option);
-                rb.setToggleGroup(grupo);
-                opciones.getChildren().add(rb);
-            }
-        } else {
-            showResult();
+            System.out.println("Error loading menu.fxml");
         }
     }
 
-    private void checkAnswer() {
-        RadioButton selected = (RadioButton) grupo.getSelectedToggle();
-        if (selected != null) {
-            String answer = selected.getText();
-            if (preguntas.get(preguntactual).isCorrect(answer)) {
-                puntuacion++;
-            }
-            preguntactual++;
-            showQuestion();
+    // Method to show the Quiz Page
+    @FXML
+    private void showQuizPage() {
+        try {
+            // Load the quiz page FXML
+            FXMLLoader quizLoader = new FXMLLoader(getClass().getResource("quiz.fxml"));
+            VBox quizLayout = quizLoader.load();
+            Scene quizScene = new Scene(quizLayout, 400, 300);
+
+            // Set the new scene
+            primaryStage.setScene(quizScene);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error loading quiz.fxml");
         }
     }
 
-    private void showResult() {
-        preguntasLabel.setText("Enhorabuena! Puntuación: " + puntuacion + "/" + preguntas.size());
-        opciones.getChildren().clear();
-        next.setDisable(true);
+    // Method to show a Blank Page
+    @FXML
+    private void showBlankPage() {
+        try {
+            // Load the blank page FXML
+            FXMLLoader blankLoader = new FXMLLoader(getClass().getResource("blank.fxml"));
+            VBox blankLayout = blankLoader.load();
+            Scene blankScene = new Scene(blankLayout, 400, 300);
+
+            // Set the new scene
+            primaryStage.setScene(blankScene);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error loading blank.fxml");
+        }
     }
 
     public static void main(String[] args) {
